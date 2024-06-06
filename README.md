@@ -1,61 +1,19 @@
-# Boomerang.io
+# Boomerang documentation repository
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f6dc5880-9a97-4b71-942c-347957ab6eed/deploy-status)](https://app.netlify.com/sites/useboomerangio/deploys)
+This repository contains the documentation Markdown source files for [useboomerang/docs](https://useboomerang.io/docs).
 
-## Structure
+The `main` branch will be automatically accessible along with any releases.
 
-```bash
-.
-├── data
-│   └── config              # SEO related tags
-├── src
-│   ├── components          # Components
-│   │   │── common          # Common components
-│   │   │── landing         # Components used on the landing page
-│   │   └── theme           # Header & Footer
-│   └── pages               # Pages
-├── static                  # Icons, favicon & SVG illustrations
-└── content                 # Documentation for the Boomerang solutions
-    ├── boomerang-bosun     # Documentation for each Bosun version
-    └── boomerang-flow      # Documentation for each Flow version
-```
+## Design
 
-## Prerequisites
+This Markdown metadata is used to generate the documentation site. The metadata is used to generate the table of contents, breadcrumbs, and other navigation elements.
 
-### [Yarn](https://yarnpkg.com/en/)
+This is based on the [Remix Docs Template](https://github.com/boomerang-io/remix-docs-template?tab=readme-ov-file#content) and its content requirements.
 
-Please create a new file `.env.development` and put this env variable with your GitHub token
+## Contributing
 
-> If you're building locally, you will have to create a new file `.env.production` and put the same env variable
+Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to contribute to this repository.
 
-```bash
-GITHUB_TOKEN=xxxxxxxxxx
-```
+## License
 
-### Python
-
-```sh
-brew install python
-```
-
-## Installing
-
-Installing the dependencies
-
-```bash
-yarn install
-```
-
-## Start the dev server
-
-```bash
-yarn start
-```
-
-### Clean the cache
-
-This removes the `.cache/` & `public/` folders
-
-```bash
-yarn reset
-```
+This repository is licensed under the [Apache License, Version 2.0](LICENSE).
