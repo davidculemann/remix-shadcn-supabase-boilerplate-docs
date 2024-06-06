@@ -1,6 +1,6 @@
 ---
 title: Overview
-index: 0
+order: 0
 ---
 
 # Overview
@@ -8,10 +8,12 @@ index: 0
 Bosun, by Boomerang, is a policy based gating system that combines [Open Policy Agent (OPA)](https://openpolicyagent.org/) definitions with Rules and Data to validate if specific Gates are passed.
 
 We currently focus on two use cases:
+
 1. CICD Gates
 2. Generic Metric Validation
 
 We also have pre built integrations to retrieve metrics with
+
 - SonarQube
 - JFrog Xray
 
@@ -27,7 +29,7 @@ There are a number of concepts to understand when using Bosun and they will be m
 
 **Policy Template**
 
-the template structure that defines the Policy Rego and Policy Rules. Templates are then used to create Policies. 
+the template structure that defines the Policy Rego and Policy Rules. Templates are then used to create Policies.
 
 **Policy Rego**
 
@@ -41,7 +43,7 @@ rules, in a domain specific lanauge, applicable to the definition
 
 the data or metrics to be validated
 
-**Labels** 
+**Labels**
 
 metadata to pass in required information to the validation system.
 
@@ -69,14 +71,13 @@ Bosun can be used in two ways, generically or pre-integrated with repositories o
 
 Labels, as previoulsy mentioned in the Concepts, are required to pass information into the pre-integrated repositories.
 
-
-| Integration | Label | Description |
-| --- | --- | --- |
-| Sonarqube | `sonarqube-id` | This is the sonarqube project id that you want to retrieve information about |
-| Sonarqube | `sonarqube-version` | The specific version for the sonarqube project |
-| JFrog Xray | `artifact-path` | |
-| JFrog Xray | `artifact-name` | |
-| JFrog Xray | `artifact-version` | |
+| Integration | Label               | Description                                                                  |
+| ----------- | ------------------- | ---------------------------------------------------------------------------- |
+| Sonarqube   | `sonarqube-id`      | This is the sonarqube project id that you want to retrieve information about |
+| Sonarqube   | `sonarqube-version` | The specific version for the sonarqube project                               |
+| JFrog Xray  | `artifact-path`     |                                                                              |
+| JFrog Xray  | `artifact-name`     |                                                                              |
+| JFrog Xray  | `artifact-version`  |                                                                              |
 
 ## APIs
 

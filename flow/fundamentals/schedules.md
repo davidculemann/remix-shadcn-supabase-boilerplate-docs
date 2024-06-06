@@ -1,6 +1,6 @@
 ---
 title: Schedules
-index: 5
+order: 5
 ---
 
 # Schedules
@@ -9,10 +9,11 @@ index: 5
 
 A centralised place to manage all Schedules for all your Workflows in one location with the occurences of these Schedules visible on a Calendar. You can also view Schedules specific for a Workflow in the Workflow Editor Schedules tab.
 
-Schedules allow you to 
+Schedules allow you to
+
 - trigger a Workflow one time or recurring
 - define the parameters to be passed to the Workflow
-- define multiple concurrent times for a Workflow to run 
+- define multiple concurrent times for a Workflow to run
 
 Schedules can be paused individually or the Schedule trigger can be disabled which will pause all Schedules. If the Schedule trigger is disabled, when enabled again it will only enable those Schedules that were previously active, respecting all prior pauses.
 
@@ -52,13 +53,13 @@ Cron schedule syntax
 # * * * * *
 ```
 
-| Schedule | Description | Cron | Quartz Cron |
-| --- | --- | --- | --- |
-| Yearly (or annually) | Run once a year at midnight of 1 January	| `0 0 1 1 *` | `0 0 0 1 1 ? *` |
-| Monthly	| Run once a month at midnight of the first day of the month | `0 0 1 * *` | `0 0 0 1 1/1 ? *` |
-| Weekly | Run once a week at midnight on Sunday morning | `0 0 * * 0` | `0 0 0 ? * SUN *`
-| Daily (or midnight)	| Run once a day at midnight | `0 0 * * *` | `0 0 0 1/1 * ? *` |
-| Hourly | Run once an hour at the beginning of the hour | `0 * * * *` | `0 0 0/1 1/1 * ? *` |
+| Schedule             | Description                                                | Cron        | Quartz Cron         |
+| -------------------- | ---------------------------------------------------------- | ----------- | ------------------- |
+| Yearly (or annually) | Run once a year at midnight of 1 January                   | `0 0 1 1 *` | `0 0 0 1 1 ? *`     |
+| Monthly              | Run once a month at midnight of the first day of the month | `0 0 1 * *` | `0 0 0 1 1/1 ? *`   |
+| Weekly               | Run once a week at midnight on Sunday morning              | `0 0 * * 0` | `0 0 0 ? * SUN *`   |
+| Daily (or midnight)  | Run once a day at midnight                                 | `0 0 * * *` | `0 0 0 1/1 * ? *`   |
+| Hourly               | Run once an hour at the beginning of the hour              | `0 * * * *` | `0 0 0/1 1/1 * ? *` |
 
 To generate Cron schedule expressions, you can use web tools like [crontab.guru](https://https://crontab.guru/). For Quartz Cron expressions you can use web tools like [cronmaker](http://www.cronmaker.com/).
 
@@ -66,4 +67,4 @@ Please note that the `1 1 1 1 1` expression does not work with Flow's scheduling
 
 ## System Task
 
-There is a System Task that allows you to create a Run Once Schedule in the future. See [Getting To Know Tasks](/docs/boomerang-flow/getting-to-know/tasks) for more detailed inforamtion.
+There is a System Task that allows you to create a Run Once Schedule in the future. See [Getting To Know Tasks](../fundamentals/tasks) for more detailed inforamtion.

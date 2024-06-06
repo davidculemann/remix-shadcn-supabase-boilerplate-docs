@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-index: 1
+order: 1
 ---
 
 # Getting started
@@ -13,7 +13,7 @@ Ensure a kubernetes namespace and MongoDB are installed
 
 **Step 2**
 
-Ensure you have a docker registry secret in your namespace for access to GitHub packages.  [Follow the instructions](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to get the github token.
+Ensure you have a docker registry secret in your namespace for access to GitHub packages. [Follow the instructions](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to get the github token.
 
 ```sh
 kubectl create secret docker-registry boomerang.registrykey --docker-server=docker.pkg.github.com --docker-username=<github_username> --docker-password=<github_token> --docker-email=<github_email> --namespace=<namespace>
@@ -36,7 +36,7 @@ Install the helm chart
 helm install --namespace <namespace> --set database.mongodb.host=<service_name> --set database.mongodb.secretName=<mongodb_secret> bmrg-bosun-$CHART_VERSION.tgz
 ```
 
-*Or Manually*
+_Or Manually_
 
 Extract the values.yaml from the helm chart and update the values in detail
 

@@ -1,6 +1,6 @@
 ---
 title: Installing Extensions
-index: 04
+order: 04
 ---
 
 # Installing and Configuring Extensions
@@ -11,7 +11,7 @@ The following information will provide detail on how to configure a built in ext
 
 An embedded contextual experience inside Slack is a powerful way for users and teams to use automation quickly and easily without having to leave Slack.
 
-[Read more about the Slack extension experience](/docs/boomerang-flow/how-to-guide/using-slack).
+[Read more about the Slack extension experience](../guides/using-slack).
 
 ### Prepare
 
@@ -59,7 +59,7 @@ settings:
   token_rotation_enabled: false
 ```
 
-### Configuration 
+### Configuration
 
 1. Navigate to [https://api.slack.com/apps?new_app=1(https://api.slack.com/apps?new_app=1). If a modal does not appear, click on 'Create New App'.
 2. On the 'Create an app' modal, select 'From an app manifest'
@@ -71,5 +71,6 @@ settings:
 
 1. Scroll down to 'Display Information' and update any necessarily details and upload an image
 2. You have two options for integrating Flow back to this Slack app
-  - Select 'Install To Workspace' to generate an App-Level Token that you can copy to Flow's Settings. The app will only be available to this Slack workspace
-  - Select 'Distribute App' and copy the App ID, Client ID, and Client Secret to Flow's Settngs. The app will be available for installation to any Workspace via a URL (or the App Directory if you choose). Flow will automatically handle using the token generated upon installation to that Workspace.
+
+- Select 'Install To Workspace' to generate an App-Level Token that you can copy to Flow's Settings. The app will only be available to this Slack workspace
+- Select 'Distribute App' and copy the App ID, Client ID, and Client Secret to Flow's Settngs. The app will be available for installation to any Workspace via a URL (or the App Directory if you choose). Flow will automatically handle using the token generated upon installation to that Workspace.

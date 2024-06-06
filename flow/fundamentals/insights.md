@@ -1,6 +1,6 @@
 ---
 title: Insights
-index: 4
+order: 4
 ---
 
 # Insights
@@ -22,13 +22,13 @@ You can filter by a combination of Team and Workflow as well as adjust the time 
 Insights includes the following metrics:
 
 - number of executions
-    - Total
-    - By top 5 Workflows
+  - Total
+  - By top 5 Workflows
 - runtime durations
-    - Median
-    - Minimum
-    - Maximum
-    - Average
+  - Median
+  - Minimum
+  - Maximum
+  - Average
 - status percentage breakdown
 - peak execution periods
 - plot of Execution time

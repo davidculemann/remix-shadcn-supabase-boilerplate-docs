@@ -1,6 +1,6 @@
 ---
 title: What's New
-index: 3
+order: 3
 ---
 
 # What's new
@@ -20,7 +20,7 @@ Get a quick overview of what has been added, changed, improved, or deprecated in
 
 ## APIs & Events
 
-- Added a new  API `workflow/teams/{teamId}/workflows`
+- Added a new API `workflow/teams/{teamId}/workflows`
 - Speed up `/teams` API performance when team list is large in size
 
 ## Management & Administration
@@ -29,14 +29,10 @@ Get a quick overview of what has been added, changed, improved, or deprecated in
 
 ## Installing
 
-- Tekton is no longer tighly coupled with a Boomerang Flow installation. See [Deprecations](/docs/boomerang-flow/introduction/known-issues-limitations#deprecations). We now recommend Tekton 0.29 or above.
+- Tekton is no longer tighly coupled with a Boomerang Flow installation. See [Deprecations](../introduction/known-issues-limitations#deprecations). We now recommend Tekton 0.29 or above.
 
 ## Stablity and Security
+
 - Fixed issue with not being able to open any pages with flow.client.web versions 3.10.0 and 3.11.0
 - Increased a number of minor dependent package versions across all parts of the solution thanks to Snyk and Dependabot.
 - Documented how to contribute to the [Flow Loader project](https://github.com/boomerang-io/flow.loader)
-
-
-
-
-

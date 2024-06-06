@@ -1,6 +1,6 @@
 ---
 title: Application
-index: 2
+order: 2
 ---
 
 # Application Architecture
@@ -11,13 +11,13 @@ The following information depicts the components and dependencies that make up t
 
 ## Components
 
-| Component   | Type         | Technology                     | Internal to Internal | External Ingress | Internal Dependency                                | External Dependency |
-| ----------- | ------------ | ------------------------------ | -------------------- | ---------------- | -------------------------------------------------- | ------------------- |
-| Flow        | Front End    | React + Node.js                | Flow MS              | true             |                                                    |                     |
-| Workflow    | Microservice | Spring Boot (Java<sup>®</sup>) | Controller MS        | true             | MongoDB<sup>®</sup>                                            |                     |
-| Controller  | Microservice | Spring Boot (Java)             |                      | false            | Kubernetes<sup>®</sup>, Tekton<sup>®</sup> TaskRun |                     |
+| Component   | Type         | Technology                     | Internal to Internal | External Ingress | Internal Dependency                                | External Dependency                                                      |
+| ----------- | ------------ | ------------------------------ | -------------------- | ---------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
+| Flow        | Front End    | React + Node.js                | Flow MS              | true             |                                                    |                                                                          |
+| Workflow    | Microservice | Spring Boot (Java<sup>®</sup>) | Controller MS        | true             | MongoDB<sup>®</sup>                                |                                                                          |
+| Controller  | Microservice | Spring Boot (Java)             |                      | false            | Kubernetes<sup>®</sup>, Tekton<sup>®</sup> TaskRun |                                                                          |
 | Listener    | Microservice | Spring Boot (Java)             | Workflow MS          | true             | NATS                                               |
-| Task Worker | TaskRun      | Node.js CLI                    |                      | false            | Kubernetes<sup>®</sup>, Tekton<sup>®</sup> TaskRun            | MongoDB<sup>®</sup> shell [image](https://hub.docker.com/r/rtsp/mongosh)                    |
+| Task Worker | TaskRun      | Node.js CLI                    |                      | false            | Kubernetes<sup>®</sup>, Tekton<sup>®</sup> TaskRun | MongoDB<sup>®</sup> shell [image](https://hub.docker.com/r/rtsp/mongosh) |
 
 _Notes:_
 
@@ -29,14 +29,14 @@ _Notes:_
 
 ## Dependencies
 
-| Dependency | Implementation | Notes |
-| --- | --- | --- |
-| Kubernetes | <ul><li>Red Hat<sup>®</sup> OpenShift<sup>®</sup> Container Platform (4.2+)</li><li>IBM Cloud<sup>®</sup> Kubernetes Service</li><li>IBM Cloud Red Hat OpenShift Kubernetes Services</li><li>Microsoft Azure Kubernetes Service</li></ul> | Kubernetes 1.20+ |  |
-| Tekton | TaskRuns | Part of Pipelines 0.23.3+ |
-| Application Load Balancer | NGINX 0.23.0+ |                                                                       |
-| Database | MongoDB |                                                                       |
-| Message Streaming | NATS Jetstream 2.3.4 | Required if eventing is enabled |
-| Certificate Manager | Jetstack Cert Manager (0.7.0) | Optional if you have your own TLS certificate as a Kubernetes secret |
-| Logs | <ul><li>Kubernetes</li><li>Grafana Loki</li></ul> | If logging enabled, default is Kubernetes |
-| Monitoring | New Relic Infrastructure, New Relic Kubernetes, New Relic APM Agent | If enabled |
-| Tracing | Jaeger<sup>®</sup> | If enabled |
+| Dependency                | Implementation                                                                                                                                                                                                                            | Notes                                                                |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | --- |
+| Kubernetes                | <ul><li>Red Hat<sup>®</sup> OpenShift<sup>®</sup> Container Platform (4.2+)</li><li>IBM Cloud<sup>®</sup> Kubernetes Service</li><li>IBM Cloud Red Hat OpenShift Kubernetes Services</li><li>Microsoft Azure Kubernetes Service</li></ul> | Kubernetes 1.20+                                                     |     |
+| Tekton                    | TaskRuns                                                                                                                                                                                                                                  | Part of Pipelines 0.23.3+                                            |
+| Application Load Balancer | NGINX 0.23.0+                                                                                                                                                                                                                             |                                                                      |
+| Database                  | MongoDB                                                                                                                                                                                                                                   |                                                                      |
+| Message Streaming         | NATS Jetstream 2.3.4                                                                                                                                                                                                                      | Required if eventing is enabled                                      |
+| Certificate Manager       | Jetstack Cert Manager (0.7.0)                                                                                                                                                                                                             | Optional if you have your own TLS certificate as a Kubernetes secret |
+| Logs                      | <ul><li>Kubernetes</li><li>Grafana Loki</li></ul>                                                                                                                                                                                         | If logging enabled, default is Kubernetes                            |
+| Monitoring                | New Relic Infrastructure, New Relic Kubernetes, New Relic APM Agent                                                                                                                                                                       | If enabled                                                           |
+| Tracing                   | Jaeger<sup>®</sup>                                                                                                                                                                                                                        | If enabled                                                           |

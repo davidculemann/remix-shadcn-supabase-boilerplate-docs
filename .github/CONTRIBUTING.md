@@ -10,7 +10,7 @@ We welcome all our users to contribute to the documentation. While you can creat
 ```file
 ---
 title: What's New
-index: 2
+order: 2
 ---
 ```
 

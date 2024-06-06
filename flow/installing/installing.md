@@ -1,17 +1,17 @@
 ---
 title: Installing
-index: 1
+order: 1
 ---
 
 # Installing
 
-Boomerang Flow is packaged as a Helm<sup>®</sup> 3 chart with the values documented in the chart. Please make sure to read the [prerequisites](/docs/boomerang-flow/installing/pre-requisites) prior to installing.
+Boomerang Flow is packaged as a Helm<sup>®</sup> 3 chart with the values documented in the chart. Please make sure to read the [prerequisites](../installing/pre-requisites) prior to installing.
 
 ## Prerequisites
 
 You are expected to have one of the supported Kubernetes<sup>®</sup> platforms available with the additional software requirements presented in the following sections.
 
-Ensure you have read and can meet all the dependencies listed in the [Application Architecture](/docs/boomerang-flow/architecture/application).
+Ensure you have read and can meet all the dependencies listed in the [Application Architecture](../architecture/application).
 
 ### Helm 3
 
@@ -19,7 +19,7 @@ Ensure you have Helm<sup>®</sup> 3 installed, as Boomerang Flow is packaged wit
 
 ### Kubernetes
 
-Ensure you have read and can meet all the dependencies listed in the [Infrastructure Architecture](/docs/boomerang-flow/architecture/infrastructure).
+Ensure you have read and can meet all the dependencies listed in the [Infrastructure Architecture](../architecture/infrastructure).
 
 ### MongoDB
 
@@ -41,7 +41,7 @@ helm upgrade --install  mongodb -n flowabl-dev bitnami/mongodb --set auth.databa
 
 ### Tekton
 
-Tekton<sup>®</sup> is another mandatory dependency that needs to be installed for Flow to properly function. The best way is to use the [Tekton Operator or Helm Chart](https://github.com/tektoncd/operator/releases). Installation steps for the Operator can be found [here](https://tekton.dev/docs/pipelines/install/). The Tekton version can be found in the [Application Architecture](/docs/boomerang-flow/architecture/application).
+Tekton<sup>®</sup> is another mandatory dependency that needs to be installed for Flow to properly function. The best way is to use the [Tekton Operator or Helm Chart](https://github.com/tektoncd/operator/releases). Installation steps for the Operator can be found [here](https://tekton.dev/docs/pipelines/install/). The Tekton version can be found in the [Application Architecture](../architecture/application).
 
 ### NATS Jetstream
 
@@ -92,7 +92,7 @@ This is an important step to ensure that an Administrator account is dynamically
 
 After installation and activation, you will be able to administer the settings. These are dynamic configurations that can be changed during runtime. This ensures don't have to provide this via the values YAML at installation time, as there is nothing worse than having to put together a values YAML with greater than 100 values!
 
-Currently, these settings will affect how the workers interface and execute. See [Workers and Execute](/docs/boomerang-flow/architecture/worker-and-executor-architecture) for details.
+Currently, these settings will affect how the workers interface and execute. See [Workers and Execute](../architecture/worker-and-executor-architecture) for details.
 
 ## Installation steps on your local machine
 

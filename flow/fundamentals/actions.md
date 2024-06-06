@@ -1,13 +1,14 @@
 ---
 title: Actions
-index: 2
+order: 2
 ---
 
 # Actions
 
-The centralized place you go for all Approval and Manual tasks that you need to 'action', think of this as your Action to-do list. It is also a great place to see an audit record of who approved what and when.  Optimising your Approval process, coupled with automation, allows you to cut costs, save time and improve productivity. 
+The centralized place you go for all Approval and Manual tasks that you need to 'action', think of this as your Action to-do list. It is also a great place to see an audit record of who approved what and when. Optimising your Approval process, coupled with automation, allows you to cut costs, save time and improve productivity.
 
 Whilst driving towards fully automated approvals, there are always cases where a manual approval may be needed and are best needed when the automated noise has already been filtered out and you can focus on the Actions that do need the visibility or analysis of a human. For instance:
+
 - To provide sign off/approval for audit purposes such as with quarterly employee reviews.
 - Providing sign off/approval before refunds are processed
 - Approving new hire onboarding or reviewing their legal paperwork

@@ -1,6 +1,6 @@
 ---
 title: GitHub Issues Bot
-index: 0
+order: 0
 ---
 
 # GitHub Issues bot

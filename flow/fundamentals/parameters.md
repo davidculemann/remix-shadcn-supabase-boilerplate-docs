@@ -1,6 +1,6 @@
 ---
 title: Parameters
-index: 6
+order: 6
 ---
 
 # Parameters
@@ -72,7 +72,7 @@ Some Standard Tasks will output result parameters.
 
 ### Custom Tasks
 
-See [Custom Task architecture](/docs/boomerang-flow/architecture/overview) for more information.
+See [Custom Task architecture](../architecture/overview) for more information.
 
 As this Task is a bring-your-own container, we have provided two mechanisms for setting result parameters.
 
@@ -86,13 +86,13 @@ As this Task is a bring-your-own container, we have provided two mechanisms for 
 Boomerang Flow parameters are very similar to what you will find in Tekton<sup>®</sup> parameters and will be familiar to some of our users.
 
 | Tekton | Example | Boomerang Flow | Example                                                     |
-| ------ | ------- | -------------- | ----------------------------------------------------------- |
+| ------ | ------- | -------------- | ----------------------------------------------------------- | ------ | ----------------------------------------------------------- |
 | -      | -       | Global         | `$(global.params.<parameter>)` or `$(params.<parameter>)`   |
 | -      | -       | Team           | `$(global.params.<parameter>)` or `$(params.<parameter>)`   |
 | -      | -       | Pipeline       | `$(params.<param name>)`                                    |
 | -      | -       | Workflow       | `$(Workflow.params.<parameter>)` or `$(params.<parameter>)` |
 | -      | -       | Context        | `$(context.pipeline.name)`                                  | System | `$(system.params.Workflow-name)` or `$(params.<parameter>)` |
-| -      | -       | Task           | `$(params.<param name>)`                                    | Task | `$(params.<param name>)` |
+| -      | -       | Task           | `$(params.<param name>)`                                    | Task   | `$(params.<param name>)`                                    |
 
 Reference:
 

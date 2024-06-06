@@ -1,6 +1,6 @@
 ---
 title: Application Architecture
-index: 0
+order: 0
 ---
 
 # Application architecture

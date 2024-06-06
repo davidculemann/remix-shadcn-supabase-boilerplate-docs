@@ -1,6 +1,6 @@
 ---
 title: Github teams and organizations
-index: 2
+order: 2
 ---
 
 # Using GitHub Tasks to create teams and add members

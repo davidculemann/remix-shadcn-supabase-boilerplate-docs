@@ -1,6 +1,6 @@
 ---
 title: Installing NATS Jetstream
-index: 03
+order: 03
 ---
 
 # Installing and Configuring NATS with Jetstream
@@ -9,14 +9,12 @@ index: 03
 
 ## Architectural Overview
 
-
 ## Prerequisites
 
-| Chart            | Version |
-| ---------------- | ------- |
-| nats/nats        | 0.8.4   |
-| nats/nack        | 0.8.0   |
-
+| Chart     | Version |
+| --------- | ------- |
+| nats/nats | 0.8.4   |
+| nats/nack | 0.8.0   |
 
 Repository: https://nats-io.github.io/k8s/helm/charts/
 
@@ -25,6 +23,7 @@ Repository: https://nats-io.github.io/k8s/helm/charts/
 **Step 0**
 
 Retrieve values files
+
 ```
 helm3 repo update
 helm3 inspect values nats/nats --version 0.8.4 > nats-0.8.4.yaml
@@ -34,11 +33,13 @@ helm3 inspect values nats/nack --version 0.8.0 > nack-0.8.0.yaml
 **Step 1**
 
 inside `nats-0.8.4.yaml` make the following changes:
+
 - enable Jetstream
 - enable Memory Storage
 - enable File Storage for persistence (add the appropriate storage class name)
 
 example:
+
 ```
 [...]
   jetstream:
@@ -78,9 +79,11 @@ example:
 ```
 
 inside `nack-0.8.0.yaml` make the following changes:
+
 - set the appropriate nats URL (be sure the name corresponds to the NATS release name - Step 2
 
 example:
+
 ```
 ###############################
 #                             #
@@ -110,10 +113,10 @@ helm3 upgrade --install --debug -n <namespace> -f nack-0.8.0.yaml nack nats/nack
 ```
 
 ## Testing
+
 URL: `nats://nats.<namespace>.svc.cluster.local:4222`
 
 See: [ArtifactHub Documentation][1], [GitHub Readme][2]
 
 [1]: https://artifacthub.io/packages/helm/nats/nack
-
 [2]: https://github.com/nats-io/nack

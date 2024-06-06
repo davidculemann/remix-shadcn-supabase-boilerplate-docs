@@ -1,6 +1,6 @@
 ---
 title: Workflow Editor
-index: 2
+order: 2
 ---
 
 # Customize a Workflow with Editor
@@ -91,14 +91,14 @@ An input parameter can be of different types and the screen will update dynamica
 
 > **Note**: Dependencies are based on trigger type. Properties will render as per their type. When manually executing a Workflow, however, webhook and schedule have particular requirements. Refer to the discussion on triggers in this topic.
 
-| Input Type | Description                                                                      |
-| ---------- | -------------------------------------------------------------------------------- |
-| Boolean    | Allows for a true / false switch                                                 |
-| Number     | Allows for integer input                                                         |
+| Input Type | Description                                                                       |
+| ---------- | --------------------------------------------------------------------------------- |
+| Boolean    | Allows for a true / false switch                                                  |
+| Number     | Allows for integer input                                                          |
 | Password   | A secure input field. _Note: In beta 1 the parameter will be visible in the logs_ |
-| Select     | Defined options that can be selected by the user                                 |
-| Text       | Single line text input                                                           |
-| Text Area  | Multi-line text input                                                            |
+| Select     | Defined options that can be selected by the user                                  |
+| Text       | Single line text input                                                            |
+| Text Area  | Multi-line text input                                                             |
 
 ## Configure
 
@@ -125,7 +125,7 @@ There are multiple trigger types;
 
 ### Workspaces
 
-Workspaces are the representation of Storage in Boomerang Flow and are typically persistent type storage. See the [Infrastructure Architecture](/docs/boomerang-flow/architecture/infrastructure) to understand more of the implementation details.
+Workspaces are the representation of Storage in Boomerang Flow and are typically persistent type storage. See the [Infrastructure Architecture](../architecture/infrastructure) to understand more of the implementation details.
 
 #### Workflow
 

@@ -1,6 +1,6 @@
 ---
 title: Email with attachments
-index: 1
+order: 1
 ---
 
 # Sending email with attachments hosted on Box

@@ -1,6 +1,6 @@
 ---
 title: Using Slack
-index: 6
+order: 6
 ---
 
 # Using the Slack App
@@ -26,9 +26,9 @@ Its time to run some awesome automation. We can do that with the above slash com
 
 ![Trigger a Workflow](./assets/slack-workflowtrigger.png)
 
-You will then be shown a modal with basic information for you to confirm it's the workflow you wish to run. 
+You will then be shown a modal with basic information for you to confirm it's the workflow you wish to run.
 
-Select 'Run It' to kick start the automation. 
+Select 'Run It' to kick start the automation.
 
 ![Run a Workflow](./assets/slack-workflowrunmodal.png)
 

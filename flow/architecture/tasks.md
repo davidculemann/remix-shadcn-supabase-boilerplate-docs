@@ -1,11 +1,11 @@
 ---
 title: Tasks
-index: 6
+order: 6
 ---
 
 # Task Execution and Frameworks
 
-Following on from the [infrastructure architecture](/docs/boomerang-flow/architecture/infrastructure), the following describes the the Task executor architecture and the Task frameworks available.
+Following on from the [infrastructure architecture](../architecture/infrastructure), the following describes the the Task executor architecture and the Task frameworks available.
 
 > Note: we also refer to Tasks as Workers
 

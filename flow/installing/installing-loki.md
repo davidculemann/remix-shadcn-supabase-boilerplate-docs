@@ -1,6 +1,6 @@
 ---
 title: Installing Loki
-index: 02
+order: 02
 ---
 
 # Installing and Configuring Loki
@@ -73,7 +73,8 @@ config.lokiAddress: http://bmrg-loki:3100/loki/api/v1/push
 
 - Use the `scrapeConfig` defined in [Scrape Configurations](#scrape-configurations).
 - Configure the pipeline based on the containers engine in use as defined in [Pipeline Stages](#pipeline-stages).
-> Remember: When using an **Openshift** the Pod Security Policies admission controller has been replaced by the Security Context Constraints admission controller. In this regard, extra steps must be performed:
+
+  > Remember: When using an **Openshift** the Pod Security Policies admission controller has been replaced by the Security Context Constraints admission controller. In this regard, extra steps must be performed:
 
   - Escalate Promtail privileges.
 
@@ -345,7 +346,8 @@ tolerations:
 
 In case the access to Grafana UI needs to be secured and allow access only to certain users, it can be achieved by following these steps.
 
- - Define a sidecar into the Grafana deployment. In containers section, define an additional container called "grafana-ngx-cnt" based on the nginx v1.21.0 image which will expose a port 80, referenced in the Grafana service definition.
+- Define a sidecar into the Grafana deployment. In containers section, define an additional container called "grafana-ngx-cnt" based on the nginx v1.21.0 image which will expose a port 80, referenced in the Grafana service definition.
+
 ```
 spec:
   containers:
@@ -366,7 +368,8 @@ spec:
       subPath: jwt.js
 ```
 
- - The 2 mounted configuration files, nginx.conf and jwt.js are served from a configmap and are setting-up the `X-WEBAUTH-USER` header with the authenticated user's email.
+- The 2 mounted configuration files, nginx.conf and jwt.js are served from a configmap and are setting-up the `X-WEBAUTH-USER` header with the authenticated user's email.
+
 ```
 data:
   nginx.conf: |
@@ -382,28 +385,28 @@ data:
 
     http {
       include /etc/nginx/mime.types;
-      default_type application/octet-stream;                                                                                                       
-      sendfile on;                        
+      default_type application/octet-stream;
+      sendfile on;
       keepalive_timeout 65;
 
-      js_import jwt.js;           
+      js_import jwt.js;
       js_set $user_email jwt.get_user_email;
 
-      upstream grafana_backend {            
+      upstream grafana_backend {
         server localhost:3000;
       }
 
-      server {            
+      server {
         listen 80;
         listen [::]:80;
         server_name localhost;
 
         location /ess/grafana {
             proxy_set_header X-WEBAUTH-USER $user_email;
-            proxy_set_header Authorization "";    
-            proxy_pass http://grafana_backend;          
-        }                   
-      }                           
+            proxy_set_header Authorization "";
+            proxy_pass http://grafana_backend;
+        }
+      }
     }
   jwt.js: |
     function extract_jwt(data) {
@@ -424,13 +427,16 @@ data:
 
     export default {get_user_email}
 ```
- - The nginx.conf is a standard nginx reverse proxy configuration. It loads the ngx_http_js_module.so (GA module from nginx) which is required to execute the javascript code to parse the JWT token. The functions for parsing the JWT token and extracting the user email are defined in the jwt.js file. This js file is loaded by nginx using the js_import directive and the get_user_email function is called to populate the $user_email variable. The new structure of the jwt.js file allows you to add extra functions to extract also the user roles, user name and other information from the JWT token.
+
+- The nginx.conf is a standard nginx reverse proxy configuration. It loads the ngx_http_js_module.so (GA module from nginx) which is required to execute the javascript code to parse the JWT token. The functions for parsing the JWT token and extracting the user email are defined in the jwt.js file. This js file is loaded by nginx using the js_import directive and the get_user_email function is called to populate the $user_email variable. The new structure of the jwt.js file allows you to add extra functions to extract also the user roles, user name and other information from the JWT token.
+
 ```
-      js_import jwt.js;           
+      js_import jwt.js;
       js_set $user_email jwt.get_user_email;
 ```
 
- - The Grafana configuration file define the username's header name and property
+- The Grafana configuration file define the username's header name and property
+
 ```yaml
 data:
   grafana.ini: |
@@ -448,19 +454,20 @@ data:
     root_url = /ess/grafana
 ```
 
- - Update the Grafana service definition. In the service definition for Grafana you will need to reference the port exposed by the nginx sidecar.
+- Update the Grafana service definition. In the service definition for Grafana you will need to reference the port exposed by the nginx sidecar.
+
 ```yaml
- kind: Service
- metadata:
-   name: grafana-service
- spec:
-   selector:
-     app: grafana
-   ports:
-     - name: grfn-port-svc
-       port: 80
-       targetPort: grfn-ngx-port
-       protocol: TCP
+kind: Service
+metadata:
+  name: grafana-service
+spec:
+  selector:
+    app: grafana
+  ports:
+    - name: grfn-port-svc
+      port: 80
+      targetPort: grfn-ngx-port
+      protocol: TCP
 ```
 
 ## References

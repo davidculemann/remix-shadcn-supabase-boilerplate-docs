@@ -11,13 +11,13 @@ hidden: true
 <docs-cards>
   <a href="/introduction/overview" aria-label="Introduction">
     <docs-card>
-      <h4 class="text-blue-brand">An introduction...</h4>
+      <h4>An introduction...</h4>
       <p>Familiarize yourself with the scalable cloud-native event-driven orchestration engine and no-code drag-and-drop workflow builder</p>
     </docs-card>
   </a>
   <a href="/fundamentals/workflows" aria-label="Workflows, tasks, triggers, and more">
     <docs-card>
-      <h4 class="text-[var(--base09)]">I'm in, let's go.</h4>
+      <h4>I'm in, let's go.</h4>
       <p>The <b>Fundamentals</b> will help you in getting to know Boomerang Flow. Get yourself geared up with a drink and some Tim Tams, then dive deep into all the building blocks.</p>
     </docs-card>
   </a>

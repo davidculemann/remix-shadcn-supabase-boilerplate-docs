@@ -1,6 +1,6 @@
 ---
 title: Administer
-index: 10
+order: 10
 ---
 
 # Administer
@@ -17,63 +17,63 @@ View your Users and manage their role. It provides an overview table for a high 
 
 ## Global Parameters
 
-Global parameters are one of the scopes of the parameter layering available. The Global Parameter administration screen allows you to create, edit, and delete Global parameters. For more information, see [Getting to Know Parameters](/docs/boomerang-flow/getting-to-know/parameters).
+Global parameters are one of the scopes of the parameter layering available. The Global Parameter administration screen allows you to create, edit, and delete Global parameters. For more information, see [Getting to Know Parameters](../fundamentals/parameters).
 
 ## Global Tokens
 
 Global Tokens is where you can create and remove global scoped API tokens that allow you to perform actions against the API endpoints on behalf of the whole platform.
 
-To understand more about scopes, see [Security Architecture](/docs/boomerang-flow/architecture/security).
+To understand more about scopes, see [Security Architecture](../architecture/security).
 
-To understand more about the APIs, see [API Architecture](/docs/boomerang-flow/architecture/apis).
+To understand more about the APIs, see [API Architecture](../architecture/apis).
 
 ## Team Quotas
 
-See [Getting To Know Quotas](/docs/boomerang-flow/getting-to-know/quotas) for more information.
+See [Getting To Know Quotas](../fundamentals/quotas) for more information.
 
 ## Settings
 
-The centralized home to configuring *everything*. You can control everything from feature flags and extensions through to user and team defaults, and how the Tasks perform.
+The centralized home to configuring _everything_. You can control everything from feature flags and extensions through to user and team defaults, and how the Tasks perform.
 
 ### Features
 
-This is the feature flags that are available in the system and allow you to retain control and personalize the experience for the users by enabling or disabling functionality. By *default*, all features are enabled.
+This is the feature flags that are available in the system and allow you to retain control and personalize the experience for the users by enabling or disabling functionality. By _default_, all features are enabled.
 
-| Feature | Description |
-| --- | --- |
-| Activity | The ability to interact with Workflow Activity |
-| Insights | The ability to interact with the Insights functionality |
-| Workflow Quotas | Whether to enforce quotas on Workflows | 
-| Workflow Triggers | Whether to display Triggers section on the Workflows Configuration page |
-| Workflow Tokens | Whether to display Tokens section on the Workflows Configuration page |
-| Team Parameters | Allow access to, and create, Team Parameters |
-| Global Parameters | Allow access to, and create, Global Parameters |
-| Team Management | Allow management and editing of teams. If disabled, the Teams page will still be visible but in read only mode |
-| User Management | Allow management and editing of users. If disabled, the Users page will still be visible but in read only mode |
-| Team Tasks | Allow the creation and management of Team tasks |
+| Feature           | Description                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------- |
+| Activity          | The ability to interact with Workflow Activity                                                                 |
+| Insights          | The ability to interact with the Insights functionality                                                        |
+| Workflow Quotas   | Whether to enforce quotas on Workflows                                                                         |
+| Workflow Triggers | Whether to display Triggers section on the Workflows Configuration page                                        |
+| Workflow Tokens   | Whether to display Tokens section on the Workflows Configuration page                                          |
+| Team Parameters   | Allow access to, and create, Team Parameters                                                                   |
+| Global Parameters | Allow access to, and create, Global Parameters                                                                 |
+| Team Management   | Allow management and editing of teams. If disabled, the Teams page will still be visible but in read only mode |
+| User Management   | Allow management and editing of users. If disabled, the Users page will still be visible but in read only mode |
+| Team Tasks        | Allow the creation and management of Team tasks                                                                |
 
 ### Extensions
 
 You can enter information as to how Extensions work
 
-| Setting | Description |
-| --- | --- |
-| Slack Auth Token | The default auth token for authenticating as a Slack app. Only used if installing into a single workspace and not a distributed app. |
-| Slack App ID | The App ID from your Slack apps credentials |
-| Slack Client ID | The Client ID from your Slack apps credentials |
-| Slack Client Secret | The Client Secret from your Slack apps credentials |
+| Setting             | Description                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Slack Auth Token    | The default auth token for authenticating as a Slack app. Only used if installing into a single workspace and not a distributed app. |
+| Slack App ID        | The App ID from your Slack apps credentials                                                                                          |
+| Slack Client ID     | The Client ID from your Slack apps credentials                                                                                       |
+| Slack Client Secret | The Client Secret from your Slack apps credentials                                                                                   |
 
 ### Task Configuration
 
 Ability to modify the underlying task execution configuration.
 
-| Config | Description |
-| --- | --- |
-| Debug | Will enable debug information in the log of executing Tasks |
-| Default Image Path | If a Task doesn't define the image it will default to what is defined here |
-| Deletion Policy | Defines the completion state that will lead to worker removal. Options are: never, on success, and always. |
-| Enable Verified Tasks to be Edited | By default, the Tasks that are shipped with Flow are considered 'verfied' and are not editable. |
-| Task Timeout Configuration | Number of minutes before a Task times out. |
+| Config                             | Description                                                                                                |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Debug                              | Will enable debug information in the log of executing Tasks                                                |
+| Default Image Path                 | If a Task doesn't define the image it will default to what is defined here                                 |
+| Deletion Policy                    | Defines the completion state that will lead to worker removal. Options are: never, on success, and always. |
+| Enable Verified Tasks to be Edited | By default, the Tasks that are shipped with Flow are considered 'verfied' and are not editable.            |
+| Task Timeout Configuration         | Number of minutes before a Task times out.                                                                 |
 
 ### Team Defaults
 
@@ -103,7 +103,7 @@ The Task Manager displays and allows you to manage all currently defined tasks, 
 
 ### Viewing tasks
 
-The left panel displays the currently defined tasks by category. Expand each category to view its related tasks.  
+The left panel displays the currently defined tasks by category. Expand each category to view its related tasks.
 
 ### Task header
 
@@ -121,23 +121,23 @@ Task definition is split into: **Basics**, **Definition fields**, and **Result P
 
 The following fields are defined as **Basics**.
 
-| Field | Description |
-| --- | --- |
-| **Name** | The identifier for task, used throughout the platform. |
-| **Category** | The group in the left task panel that is identified with the task.|
-| **Icon** | The icon associated with that task, used throughout the platform.|
-| **Description** | A short narrative of the task. |
-| **Image** | The container image to use |
-| **Command** | The command to run when starting the container |
-| **Arguments** | The list of values passed into the task parameters. |
-| **Script** | The body of a script to run. If the script field is present, the task cannot also contain a command field. |
-| **Working Directory** | The directory inside the container to execute inside of |
-| **Envs** | Environment key values to define and pass through to the container |
-| **Contribution level** | Verified or Community |
+| Field                  | Description                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Name**               | The identifier for task, used throughout the platform.                                                     |
+| **Category**           | The group in the left task panel that is identified with the task.                                         |
+| **Icon**               | The icon associated with that task, used throughout the platform.                                          |
+| **Description**        | A short narrative of the task.                                                                             |
+| **Image**              | The container image to use                                                                                 |
+| **Command**            | The command to run when starting the container                                                             |
+| **Arguments**          | The list of values passed into the task parameters.                                                        |
+| **Script**             | The body of a script to run. If the script field is present, the task cannot also contain a command field. |
+| **Working Directory**  | The directory inside the container to execute inside of                                                    |
+| **Envs**               | Environment key values to define and pass through to the container                                         |
+| **Contribution level** | Verified or Community                                                                                      |
 
 #### Definition fields
 
-Definition fields vary according to the task. See [Parameters](/boomerang-cicd/getting-to-know/parameters).
+Definition fields vary according to the task. See [Parameters](/boomerang-cicd/fundamentals/parameters).
 The displayed fields can be dragged and dropped to change their order.
 
 > **Note**: Click **Preview** in the top right corner of the page to view what the user sees for that task, when editing a task on the platform.

@@ -1,6 +1,6 @@
 ---
 title: Create Workflow
-index: 1
+order: 1
 ---
 
 # Create a new Workflow
@@ -28,19 +28,19 @@ Follow these steps to create a Workflow:
 - **Icon** - Adds personalization and identifiable representation of the Workflow.
 
 4. Click **Create** when complete. The Workflow Editor page displays.
-5. Use the functionality available on the Editor page to define the Workflow. See [Workflow Editor](/docs/boomerang-flow/how-to-guide/workflow-editor).
+5. Use the functionality available on the Editor page to define the Workflow. See [Workflow Editor](../guides/workflow-editor).
 
 ## Create from Template
 
 There are a number of Templates available out of the box, with additional ones able to be created by the administrators.
 
-Learn more about [Workflow Templates](/docs/boomerang-flow/getting-to-know/workflows/#workflow-templates) in our Getting To Know Workflow Templates guide.
+Learn more about [Workflow Templates](../fundamentals/workflows/#workflow-templates) in our Getting To Know Workflow Templates guide.
 
 Follow these steps to create from template:
 
 1. Click 'Templates +' in the top right of the page
 
-    You will be shown a modal with a collection of Templates. A visual view, as well as a Description and Parameters needed.
+   You will be shown a modal with a collection of Templates. A visual view, as well as a Description and Parameters needed.
 
 ![Create a Workflow](./assets/workflows-create-templates.png)
 

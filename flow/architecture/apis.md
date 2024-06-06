@@ -1,6 +1,6 @@
 ---
 title: APIs
-index: 4
+order: 4
 ---
 
 # API Architecture
@@ -8,10 +8,11 @@ index: 4
 Boomerang Flow exposes a series of RESTFul APIs that allows the query and management of teams, users, and workflows as well as drive extensibility.
 
 These include for example:
-* User Management (List, Create, update and delete users)
-* Team Management (List, Create, update and delete teams)
-* Workflow Management (List Boomerang Flow team workflows and system workflows)
-* Activity Management (Submit requests to execute workflows and provide the ability to search and retrieve workflow activities)
+
+- User Management (List, Create, update and delete users)
+- Team Management (List, Create, update and delete teams)
+- Workflow Management (List Boomerang Flow team workflows and system workflows)
+- Activity Management (Submit requests to execute workflows and provide the ability to search and retrieve workflow activities)
 
 Available APIs can be viewed in the online Boomerang Flow API viewer at (https://try.useboomerang.io/flow/apis/docs/swagger-ui/index.html?url=/flow/apis/docs/api).
 
@@ -19,7 +20,7 @@ Available APIs can be viewed in the online Boomerang Flow API viewer at (https:/
 
 All Flow APIs calls are required by authenticated with an appropriately scoped x-access-token in the HTTP header of each request.
 
-Please refer to [security architecture](/docs/boomerang-flow/architecture/security#tokens) for further guidance and API documentation for the required token scope for each API call. 
+Please refer to [security architecture](../architecture/security#tokens) for further guidance and API documentation for the required token scope for each API call.
 
 ## OpenAPI specification
 
@@ -39,10 +40,9 @@ _In the future we will also support NodeJS and Go._
 
 Our API endpoints have limits on the number of requests that can be made with the following defaults that can be edited in the Ingress definition.
 
-| Type | Description | Default |
-| --- | --- | --- |
-| Connections | Number of concurrent connections allowed from a single IP address | 3 |
-| Requests Per Minute (rpm) | Number of requests accepted from a given IP each minute | 100 |
+| Type                      | Description                                                       | Default |
+| ------------------------- | ----------------------------------------------------------------- | ------- |
+| Connections               | Number of concurrent connections allowed from a single IP address | 3       |
+| Requests Per Minute (rpm) | Number of requests accepted from a given IP each minute           | 100     |
 
-*Reference*: https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rate-limiting
-
+_Reference_: https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rate-limiting

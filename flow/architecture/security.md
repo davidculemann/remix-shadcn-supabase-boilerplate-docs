@@ -1,6 +1,6 @@
 ---
 title: Security
-index: 3
+order: 3
 ---
 
 # Security Architecture
@@ -16,6 +16,7 @@ There are also Tokens for securing API endpoints and Workflows by either Global,
 ### Tokens
 
 Tokens are used to secure the API endpoints as well as Workflow triggers. There are two formats of Tokens currently implemented in Boomerang Flow;
+
 - The legacy token format is currently used by Workflow Triggers and the _deprecated_ System Tokens
 - The new token format used by our API Tokens which have identifiable prefixes of `bfg_` for Global and `bft_` for Team tokens.
 
@@ -25,10 +26,10 @@ Tokens are used to secure the API endpoints as well as Workflow triggers. There 
 
 API Tokens can be of two different scopes, easily identified by their Token prefix.
 
-| Scope | Token Prefix | Access |
-| --- | --- | --- |
-| Global | `bfg_` | Allows you to retrieve information or perform an action on any team, user, or workflow. |
-| Team | `bft_` | Allows you to retrieve information perform an action of a specific team or team workflows. |
+| Scope  | Token Prefix | Access                                                                                     |
+| ------ | ------------ | ------------------------------------------------------------------------------------------ |
+| Global | `bfg_`       | Allows you to retrieve information or perform an action on any team, user, or workflow.    |
+| Team   | `bft_`       | Allows you to retrieve information perform an action of a specific team or team workflows. |
 
 #### Workflow Tokens
 
@@ -46,32 +47,32 @@ Authorization is split into Global roles and also Team Entitlements.
 
 **Roles**
 
-| Level       | Role     | Access                                                                       |
-| ----------- | -------- | ---------------------------------------------------------------------------- |
-| global      | admin    | Full access to Flow: Ability to access and manage all teams and system       |
-| global      | operator | Access to Flow across teams: Ability to access and manage all teams          |
-| global      | user     | No access unless in a team with an entitlement                                  |
-| team | user     | Default role within a team: Can do most functions other than Flow management |
+| Level  | Role     | Access                                                                       |
+| ------ | -------- | ---------------------------------------------------------------------------- |
+| global | admin    | Full access to Flow: Ability to access and manage all teams and system       |
+| global | operator | Access to Flow across teams: Ability to access and manage all teams          |
+| global | user     | No access unless in a team with an entitlement                               |
+| team   | user     | Default role within a team: Can do most functions other than Flow management |
 
 ## Access control
 
-| Interface                | Administrator (Global) | Operator (Global) | User (Global) | User (Team) |
-| ------------------------ | ---------------------- | ----------------- | ------------- | ------------------ |
-| Workflows                | View & Execute         | View & Execute    | -             | View & Execute     |
-| Actions                  | View & Execute         | View & Execute    | -             | View & Execute     |
-| Activity                 | View                   | View              | View          | View               |
-| Insights                 | View                   | View              | View          | View               |
-| Manage - Team Parameters | Edit                   | Edit              | -             | -                  |
-| Manage - Team Tasks      | Edit                   | Edit              | -             | -                  |
-| Manage - Team Tokens     | Edit                   | Edit              | -             | -                  |
-| Admin - Teams            | Edit                   | Edit              | -             | -                  |
-| Admin - Users            | Edit                   | Edit              | -             | -                  |
-| Admin - Parameters       | Edit                   | Edit              | -             | -                  |
-| Admin - Tokens           | Edit                   | Edit              | -             | -                  |
-| Admin - Quotas           | Edit                   | Edit              | -             | -                  |
-| Admin - Settings         | Edit                   | Edit              | -             | -                  |
-| Admin - Task Manaers     | Edit                   | Edit              | -             | -                  |
-| Admin - System Workflows | Edit                   | Edit              | -             | -                  |
+| Interface                | Administrator (Global) | Operator (Global) | User (Global) | User (Team)    |
+| ------------------------ | ---------------------- | ----------------- | ------------- | -------------- |
+| Workflows                | View & Execute         | View & Execute    | -             | View & Execute |
+| Actions                  | View & Execute         | View & Execute    | -             | View & Execute |
+| Activity                 | View                   | View              | View          | View           |
+| Insights                 | View                   | View              | View          | View           |
+| Manage - Team Parameters | Edit                   | Edit              | -             | -              |
+| Manage - Team Tasks      | Edit                   | Edit              | -             | -              |
+| Manage - Team Tokens     | Edit                   | Edit              | -             | -              |
+| Admin - Teams            | Edit                   | Edit              | -             | -              |
+| Admin - Users            | Edit                   | Edit              | -             | -              |
+| Admin - Parameters       | Edit                   | Edit              | -             | -              |
+| Admin - Tokens           | Edit                   | Edit              | -             | -              |
+| Admin - Quotas           | Edit                   | Edit              | -             | -              |
+| Admin - Settings         | Edit                   | Edit              | -             | -              |
+| Admin - Task Manaers     | Edit                   | Edit              | -             | -              |
+| Admin - System Workflows | Edit                   | Edit              | -             | -              |
 
 ## Audit
 

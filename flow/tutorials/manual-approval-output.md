@@ -1,6 +1,6 @@
 ---
 title: Manual Approval Output Details
-index: 3
+order: 3
 ---
 
 # Getting the details of a Manual Approval Task

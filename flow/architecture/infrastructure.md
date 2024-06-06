@@ -1,11 +1,11 @@
 ---
 title: Infrastructure
-index: 1
+order: 1
 ---
 
 # Infrastructure Architecture
 
-The infrastructure is based on top of Kubernetes<sup>®</sup> using Tekton<sup>®</sup> TaskRuns, ConfigMaps, Secrets, and Persistent Volumes. See the [Task architecture](/docs/boomerang-flow/architecture/tasks) for more information.
+The infrastructure is based on top of Kubernetes<sup>®</sup> using Tekton<sup>®</sup> TaskRuns, ConfigMaps, Secrets, and Persistent Volumes. See the [Task architecture](../architecture/tasks) for more information.
 
 ## Kubernetes
 
@@ -35,6 +35,7 @@ See [Kubernetes ephemeral storage](https://kubernetes.io/docs/concepts/configura
 There are different types of persistent volumes used by the task orchestration system and are enabled by Workflow in the Workflow Editor > Configuration.
 
 You can configure the storage size, storage class, and access modes for the following types in the Settings under Administer. By default:
+
 - Storage Size is set to 1GB
 - Storage Class is not set. This will therefore use the default defined in your kubernetes cluster
 - Access Mode is set as Read Write Many.
@@ -44,7 +45,7 @@ We recommend using [Ranchers Local Path Provisioner](https://github.com/rancher/
 
 #### Workspaces
 
-Workspaces are the representation of Storage in use by Boomerang Flow (and Tekton) Workflows. There are currently two workspaces available to be enabled in a Workflow. See the [Workspaces section of the Workflow Editor How to Guide](/docs/boomerang-flow/how-to-guide/workflow-editor#workspaces) for more information.
+Workspaces are the representation of Storage in use by Boomerang Flow (and Tekton) Workflows. There are currently two workspaces available to be enabled in a Workflow. See the [Workspaces section of the Workflow Editor How to Guide](../guides/workflow-editor#workspaces) for more information.
 
 - Workflow Workspace: This workspace will not churn often as it stays persisted and maximum storage required can be calculated by the number of workflows and maximum size i.e. if you have 100 workflows and the maximum size is set at 5GB you will have a requirement of 500GB (100GB x 5GB) of Persistent Storage needed.
 - Activity Workspace: This workspace can cause churn of persistent volumes and can cause instability depending on the Storage driver you are using, we recommend using a fast provisioning Storage Class for this type of PVC. Maximum storage required can be calculated by the number of workflows x maximum concurrent executions x maximum size i.e. if you have 100 workflows and 4 concurrent workflows and maximum storage size is set at 5GB you will have a requirement of 2TB (100GB x 4 x 5GB) of Persistent Storage needed.
