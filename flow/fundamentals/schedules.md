@@ -41,7 +41,7 @@ Allows you to define the cron schedule and timezone. The cron accepts both 5 par
 
 Cron schedule syntax
 
-```
+```sh
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
 # │ │ ┌───────────── day of the month (1 - 31)

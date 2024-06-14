@@ -5,7 +5,7 @@ order: 1
 
 # Overview
 
-Modernize and supercharge your Workflow automation with a powerful no-code event driven Workflow automation tool built cloud native on top of Kubernetes<sup>®</sup>. It enables new ways of approaching your business Tasks or combine with existing tools to extend your current workloads.
+Modernize and supercharge your automation with a powerful no-code event driven Workflow automation tool, built cloud native on top of Kubernetes<sup>®</sup>. It enables new ways of approaching your business Tasks or combine with existing tools to extend your current workloads.
 
 Supporting the no-code paradigm with out-of-the-box Tasks, Boomerang Flow offers extensibility to bring your own Tasks, while providing custom container support.
 
@@ -15,7 +15,7 @@ Create your next Workflow to produce an end-to-end process that executes a serie
 
 ## Benefits
 
-- A no-code drag-and-drop UI editor for creating Workflows.
+- No-code drag-and-drop UI editor for creating Workflows.
 - Cloud native from the ground up, with no overhead from legacy implementations.
 - Cloud agnostic and can be run in any Kubernetes environment.
 - Events based on [CloudEvents](https://cloudevents.io) and [NATS](https://nats.io).
@@ -89,14 +89,14 @@ The menu is the primary navigation tool for Boomerang Flow. It is located to the
 
 ## Sponsored Organizations
 
-### IBM Consulting Essentials
+### IBM Consulting Advantage
 
-As Boomerang Flow was contributed to open source, and continues to be sponsored by IBM, integration is enabled with IBM Consulting<sup>®</sup> Essentials. Flow is supported out-of-the box, providing additional enterprise capabilities such as audit logging, consent management, and user and team role management via the broader IBM platform. There are also Tasks available that rely on platform services.
+As Boomerang Flow was contributed to open source, and continues to be sponsored by IBM, integration is enabled with IBM Consulting<sup>®</sup> Advantage. Flow is supported out-of-the box, providing additional enterprise capabilities such as audit logging, consent management, and user and team role management via the broader IBM platform. There are also Tasks available that rely on platform services.
 
-At installation time, you can configure whether to run Boomerang Flow in standalone mode (default) or integrated to IBM Consulting Essentials.
+At installation time, you can configure whether to run Boomerang Flow in standalone mode (default) or integrated to IBM Consulting Advantage.
 
-### Flowabl.io
+### Backstop
 
-The team behind Flowabl are some of the original creators of Boomerang Flow and continue to support the Open Source community, as well as providing the [Try Me](https://www.useboomerang.io/try) environment.
+The team behind Backstop are some of the original creators of Boomerang Flow and continue to support the Open Source community, as well as providing the [Try Me](https://www.useboomerang.io/try) environment.
 
 They also provide a free tier of their managed service and benefits for the open source community.

@@ -4,25 +4,12 @@ We welcome all our users to contribute to the documentation. While you can creat
 
 ## How to write content
 
-1. Write documentation `.md` files in the `content` directory.
-2. Add frontmatter for the `title` of the document. _See existing documents for reference._
+1. Write documentation `.md` files in the appropriate content directory.
+2. Add frontmatter for the document.
 
-```file
----
-title: What's New
-order: 2
----
-```
+> Note: see existing documents for reference.
 
-| Key   | Type   | Purpose                                                                                           | Required | Default Value            |
-| ----- | ------ | ------------------------------------------------------------------------------------------------- | -------- | ------------------------ |
-| title | string | Used to build the link to document using kebabCase version of value. Used for sidenav navigation. | no       | filename of the document |
-| index | string | Specify where this doc should be shown in its category.                                           | no       | order in the folder      |
-
-**Note**
-
-- If title is not provided, it will default to the filename of the document.
-- If index is not provided, it will default to the order in the folder.
+> Note: refer to the [Remix Docs Template](https://github.com/boomerang-io/remix-docs-template?tab=readme-ov-file#frontmatter) to understand the frontmatter requirements.
 
 ## Recommended Structure
 
@@ -36,34 +23,29 @@ If you are a solution team creating a new topic of content we recommend that you
 The folder structure to match the above would be:
 
 ```file
-content
- |__ solution
-   |__ version
-     |__ introduction
-       |__ 00.overview.md
-       |__ 01.getting-started.md
-       |__ 02.whats-new.md
-       |__ 03.known-issues.md
+solution
+ |__ introduction
+   |__ index.md
+   |__ overview.md
+   |__ getting-started.md
+   |__ whats-new.md
+   |__ known-issues.md
 ```
 
 from here you can create additional topics such as architecture or detailed usage scenarios and information
 
 ```file
-content
- |__ solution
-   |__ version
-     |__ category
-       |__ document.md
+solution
+ |__ category
+   |__ document.md
 ```
 
 e.g.
 
 ```file
-content
- |__ boomerang
-   |__ 1.0.0
-     |__ architecture
-       |__ overview.md
+flow
+ |__ architecture
+   |__ overview.md
 ```
 
 ## Content Configuration

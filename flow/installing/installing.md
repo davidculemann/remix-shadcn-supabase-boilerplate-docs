@@ -70,7 +70,6 @@ Explicit examples of the configuration files can be found [here](https://github.
 ```sh
 helm repo add boomerang-io https://raw.githubusercontent.com/boomerang-io/charts/index
 helm repo update
-
 helm upgrade --install --debug flow boomerang-io/bmrg-flow -f <configuration.yaml>
 ```
 

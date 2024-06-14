@@ -4,11 +4,15 @@ This repository contains the documentation Markdown source files for [useboomera
 
 The `main` branch will be automatically accessible along with any releases.
 
+## Releases
+
+Releases are tagged with the version number matching a release and prefixed with the product. For example flow@3.12.0 or bosun@1.0.0.
+
 ## Design
 
-This Markdown metadata is used to generate the documentation site. The metadata is used to generate the table of contents, breadcrumbs, and other navigation elements.
+Markdown metadata is used to generate the documentation site: table of contents, breadcrumbs, and other navigation elements.
 
-This is based on the [Remix Docs Template](https://github.com/boomerang-io/remix-docs-template?tab=readme-ov-file#content) and its content requirements.
+This is based on the [Remix Docs Template](https://github.com/boomerang-io/remix-docs-template?tab=readme-ov-file#frontmatter) and its content requirements.
 
 ## Contributing
 

@@ -9,7 +9,7 @@ hidden: true
 # Boomerang Flow Docs
 
 <docs-cards>
-  <a href="/introduction/overview" aria-label="Introduction">
+  <a href="introduction/overview" aria-label="Introduction">
     <docs-card>
       <h4>An introduction...</h4>
       <p>Familiarize yourself with the scalable cloud-native event-driven orchestration engine and no-code drag-and-drop workflow builder</p>
