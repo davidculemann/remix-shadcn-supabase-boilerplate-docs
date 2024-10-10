@@ -27,22 +27,22 @@ hidden: true
       <p>Spend your first few minutes in a <span style="text-decoration:underline">Tutorial</span>. It's the best way to explore practical examples to understand the features.</p>
     </docs-card>
   </a>
-  <a href="/guides/management" aria-label="Want to know more?">
-    <docs-card>
-      <h4 class="text-green-brand">Want to know more?</h4>
-      <p>The <b>Guides</b> are a great way to learn a specific use case. Whether it be management of the system, or running a Workflow.</p>
-    </docs-card>
-  </a>
   <a href="/installation/installing" aria-label="Installation steps">
     <docs-card>
       <h4 class="text-green-brand">Shall we dance?</h4>
       <p>Learn what it takes, and how, to install your own Remix Shadcn Boilerplate.</p>
     </docs-card>
   </a>
-  <a href="https://join.slack.com/t/boomerang-io/shared_invite/zt-pxo2yw2o-c3~6YvWkKNrKIwhIBAKhaw" aria-label="Remix API" target="_blank">
+  <a href="https://www.linkedin.com/in/david-culemann" aria-label="Contact">
     <docs-card>
-      <h4 class="text-red-brand">I'm stuck!</h4>
-      <p>Need help? Want to contribute? Remix Shadcn Boilerplate is developed in the open with a helpful community. Come and chat with us in Slack!</p>
+      <h4 class="text-green-brand">Want to chat?</h4>
+      <p>Need help? have an idea, or just want to chat? Feel free to reach out on LinkedIn</p>
+    </docs-card>
+  </a>
+  <a href="https://github.com/davidculemann/remix-shadcn-boilerplate" aria-label="Remix API" target="_blank">
+    <docs-card>
+      <h4 class="text-red-brand">Let's collab</h4>
+      <p>Want to contribute? Remix Shadcn Boilerplate is developed in the open with a helpful community.</p>
     </docs-card>
   </a>
 </docs-cards>
