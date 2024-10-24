@@ -1,7 +1,7 @@
 ---
-title: Remix Shadcn Boilerplate Docs Home
+title: Docs
 order: 1
-description: Learn how to create better automation.
+description: About the project.
 toc: true
 hidden: true
 ---
