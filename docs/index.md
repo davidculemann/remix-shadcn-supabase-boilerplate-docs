@@ -9,28 +9,16 @@ hidden: true
 # Remix Shadcn Boilerplate Docs
 
 <docs-cards>
-  <a href="introduction/overview" aria-label="Introduction">
+  <a href="https://github.com/davidculemann/remix-shadcn-supabase-boilerplate" aria-label="Source code">
     <docs-card>
-      <h4>An introduction...</h4>
-      <p>Familiarize yourself with the scalable cloud-native event-driven orchestration engine and no-code drag-and-drop workflow builder</p>
+      <h4>The Source</h4>
+      <p>Familiarize yourself with the source code and make your own project by forking the repo from GitHub.</p>
     </docs-card>
   </a>
-  <a href="/fundamentals/workflows" aria-label="Workflows, tasks, triggers, and more">
+  <a href="https://github.com/davidculemann/remix-shadcn-supabase-boilerplate/issues/new" aria-label="Issues">
     <docs-card>
-      <h4>I'm in, let's go.</h4>
-      <p>The <b>Fundamentals</b> will help you in getting to know Remix Shadcn Boilerplate. Get yourself geared up with a drink and some Tim Tams, then dive deep into all the building blocks.</p>
-    </docs-card>
-  </a>
-  <a href="/tutorials/github-issues-bot" aria-label="Take a tutorial for a spin.">
-    <docs-card>
-      <h4 class="text-green-brand">I want to try it out...</h4>
-      <p>Spend your first few minutes in a <span style="text-decoration:underline">Tutorial</span>. It's the best way to explore practical examples to understand the features.</p>
-    </docs-card>
-  </a>
-  <a href="/installation/installing" aria-label="Installation steps">
-    <docs-card>
-      <h4 class="text-green-brand">Shall we dance?</h4>
-      <p>Learn what it takes, and how, to install your own Remix Shadcn Boilerplate.</p>
+      <h4 class="text-green-brand">Found an issue?</h4>
+      <p>Please let the community know by opening an issue. Even better, contribute a fix directly through a [PR](https://github.com/davidculemann/remix-shadcn-supabase-boilerplate/compare)</p>
     </docs-card>
   </a>
   <a href="https://www.linkedin.com/in/david-culemann" aria-label="Contact">
