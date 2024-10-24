@@ -1,6 +1,6 @@
 ---
 title: Manage
-order: 10
+order: 7
 ---
 
 # Manage
