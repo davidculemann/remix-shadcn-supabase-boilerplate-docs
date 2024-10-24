@@ -85,8 +85,6 @@ The following are additional areas of functionality that may be access through t
 
 The menu is the primary navigation tool for Boomerang Flow. It is located to the top left in the header.
 
-![Boomerang Flow Navigation](./assets/img/navigating.png)
-
 ## Sponsored Organizations
 
 ### IBM Consulting Advantage
