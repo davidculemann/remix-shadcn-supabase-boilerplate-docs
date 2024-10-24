@@ -1,27 +1,18 @@
 ---
 title: Frequently Asked Questions
-order: 5
+order: 3
 ---
 
-# Frequently asked questions
+# Frequently Asked Questions
 
-## How long does a Workflow take to execute?
+## How long does a workflow take to execute?
 
-A Workflow can take any amount of time. A Workflow generally starts executing a Task within three seconds. A simple Workflow with a single Task usually takes less then 15 seconds end-to-end.
+The time it takes to complete a workflow depends on the number of tasks and the complexity of each task. Simple workflows typically finish in seconds.
 
-## Does enabling the Workflow option for persistent storage have a performance impact?
+## Does using persistent storage impact performance?
 
-Enabling the Workflow option for persistent storage results in a small performance impact, as the system works behind the scenes to spin up storage prior to executing any Tasks on the Workflow.
+Using persistent storage can add a small delay, as data needs to be stored and accessed during task execution.
 
-In tests, this has taken from 5 - 10 seconds of additional time.
+## Can I create custom tasks?
 
-## Are there any time limits defined or that can be set?
-
-We do not yet have customizable limits or timeouts implemented in Flow.
-
-## Can I create my own Tasks?
-
-Yes. There are two ways this can be done
-
-1. You can bring your own containers and run them through the use of the **Custom** Task in the Workflow Editor.
-2. You can define a Team Task and use that in your Workflow. These Tasks can also be imported from the Tekton Task Hub.
+Yes, custom tasks can be added to workflows to handle specific functions.
