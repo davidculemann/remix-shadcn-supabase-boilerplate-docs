@@ -18,8 +18,7 @@ hidden: true
   <a href="https://github.com/davidculemann/remix-shadcn-supabase-boilerplate/issues/new" aria-label="Issues">
     <docs-card>
       <h4 class="text-green-brand">Found an issue?</h4>
-      <p>Please let the community know by opening an issue. Even better, contribute a fix directly through a </p>
-      <a href="https://github.com/davidculemann/remix-shadcn-supabase-boilerplate/compare">pull request</a>.
+      <p>Please let the community know by opening an issue. Even better, contribute a fix directly through a <a href="https://github.com/davidculemann/remix-shadcn-supabase-boilerplate/compare">pull request</a>.</p>
     </docs-card>
   </a>
   <a href="https://www.linkedin.com/in/david-culemann" aria-label="Contact">
